@@ -1,13 +1,15 @@
 {
      "listeners": {
          "*:80": {
-             "application": "hello-php"
+             "application": "php-web"
          }
      },
      "applications": {
-         "hello-php": {
+         "php-web": {
              "type": "php",
-              "workers": 5,
+              "workers": 20,
+              "user": "www-data",
+              "group": "www-data",
               "root": "/var/www/apps",
               "index": "index.php"
          }
